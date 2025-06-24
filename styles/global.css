@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .layout-responsive {
+    @apply px-[20px] py-[40px];
+  }
+
+  @screen md {
+    .layout-responsive {
+      @apply px-[60px] py-[60px];
+    }
+  }
+
+  @screen lg {
+    .layout-responsive {
+      @apply px-[100px] py-[80px];
+    }
+  }
+}
+@keyframes spinInFromRight {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    opacity: 2;
+  }
+}
+
+.spin-in {
+  animation: spinInFromRight 2s ease-out forwards;
+}
